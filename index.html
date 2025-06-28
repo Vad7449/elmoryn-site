@@ -4,19 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elmoryn</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
-<body>
-  <h1>Сайт elmoryn.com.ua скоро відкриється!</h1>
-  <p>Дякуємо за інтерес 💙</p>
+<body class="bg-white text-gray-800">
+
+  <!-- Хедер -->
+  <header class="bg-black text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Elmoryn</h1>
+    <nav class="space-x-4 hidden md:block">
+      <a href="#home" class="hover:underline">Головна</a>
+      <a href="#categories" class="hover:underline">Категорії</a>
+      <a href="#contact" class="hover:underline">Контакти</a>
+    </nav>
+  </header>
+
+  <!-- Головна сторінка -->
+  <section id="home" class="p-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ласкаво просимо до Elmoryn</h2>
+    <p class="mb-6">Тут ви знайдете найкращі товари для вас</p>
+    <a href="#categories" class="bg-black text-white px-6 py-2 rounded">Переглянути товари</a>
+  </section>
+
+  <!-- Категорії -->
+  <section id="categories" class="p-6">
+    <h3 class="text-2xl font-bold mb-4">Категорії товарів</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="border p-4 rounded shadow">Категорія 1</div>
+      <div class="border p-4 rounded shadow">Категорія 2</div>
+      <div class="border p-4 rounded shadow">Категорія 3</div>
+    </div>
+  </section>
+
+  <!-- Популярні товари -->
+  <section id="popular" class="p-6">
+    <h3 class="text-2xl font-bold mb-4">Популярні товари</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Приклад товару -->
+      <div class="border p-4 rounded shadow">
+        <img src="https://via.placeholder.com/150" alt="Товар" class="mb-2">
+        <h4 class="font-bold">Назва товару</h4>
+        <p>Короткий опис</p>
+        <p class="font-semibold">₴123</p>
+        <button class="mt-2 bg-black text-white px-4 py-1 rounded">Купити</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contact" class="p-6 bg-gray-100">
+    <h3 class="text-2xl font-bold mb-4">Зв’язок</h3>
+    <form class="max-w-md mx-auto space-y-4">
+      <input type="text" placeholder="Ім’я" class="w-full p-2 border rounded">
+      <input type="email" placeholder="Email" class="w-full p-2 border rounded">
+      <textarea placeholder="Ваше повідомлення" class="w-full p-2 border rounded"></textarea>
+      <button type="submit" class="bg-black text-white px-4 py-2 rounded">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-black text-white text-center p-4 mt-8">
+    © 2025 Elmoryn. Усі права захищено.
+  </footer>
+
 </body>
 </html>
